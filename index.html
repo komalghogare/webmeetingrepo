@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="calender.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <span class="ml-3 text-xl">Fiberly</span>
+        </a>
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-black  text-base justify-center">
+          <a class="mr-5 hover:text-gray-900">Solution</a>
+          <a class="mr-5 hover:text-gray-900">Product</a>
+          <a class="mr-5 hover:text-gray-900">Resources</a>
+          <a class="mr-5 hover:text-gray-900">Pricing</a>
+        </nav>
+        <button class="inline-flex items-center border-0 py-1 px-3 text-black mt-4 md:mt-0">Log in
+        </button>
+        <button class="inline-flex items-center border-1 py-1 px-3 mt-4 md:mt-0 text-black border-black">Get a demo
+        </button>
+        <button class="inline-flex items-center bg-black py-1 text-white px-3 mx-1 focus:outline-none hover:bg-gray-200  text-base mt-4 md:mt-0">Button
+        </button>
+      </div>
+    </header>
+
+    <!--hero section-->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <h1 class="flex-grow sm:pr-16 text-2xl text-6xl  title-font text-gray-900">Pricing & Scheduling.</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Launch demo modal
+        </button>
+      </div>
+      <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <p class="mt-4 font-xl">Start for free, upgrade yourself with new techniques</p>
+      </div>
+    </div>
+  </section>
+  <!--hero sections-->
+   <!--main-->
+   <div class="container lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto py-24">
+    <div class="row">
+      <div class="col">
+        <p class="text-4xl  title-font text-gray-900 ">Solo</p>
+        <p class="text-4xl  title-font text-gray-900 ">$0 </p>
+          <button class="inline-flex text-white bg-black mt-2 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">pricing</button>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quas fugit et modi accusamus eaque nisi delectus</p>
+      </div>
+      <div class="col">
+        <p class="text-4xl  title-font text-gray-900 ">Sedule a meeting</p>
+        <p class="text-4xl  title-font text-gray-900 ">$0 </p>
+          <button class="inline-flex text-white bg-black mt-2 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded" id="schedule">schedule a meeting</button>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quas fugit et modi accusamus eaque nisi delectus</p>
+      </div>
+      <div class="col">
+        <p class="text-4xl  title-font text-gray-900 ">Talk with Experts</p>
+        <p class="text-4xl  title-font text-gray-900 ">$0 </p>
+          <button class="inline-flex text-white bg-black mt-2 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Talk</button>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quas fugit et modi accusamus eaque nisi delectus</p>
+      </div>
+    </div>
+  </div>
+  <!--main end-->
+
+
+
+<!-- Modal 1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img src="logo.svg" alt="" style="margin:0 auto; width: 50%;">
+              <hr>
+              <p>To schedule a meeting, please provide details such as preferred date and time, duration, and agenda.</p>
+            </div>
+            <div class="col-sm">
+              <div class="calendar-container">
+                <header class="calendar-header">
+                    <p class="calendar-current-date"></p>
+                    <div class="calendar-navigation">
+                        <span id="calendar-prev"
+                              class="material-symbols-rounded">
+                            
+                        </span>
+                        <span id="calendar-next"
+                              class="material-symbols-rounded">
+                           
+                        </span>
+                    </div>
+                </header>
+         
+                <div class="calendar-body">
+                    <ul class="calendar-weekdays">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+                    <ul class="calendar-dates"></ul>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm" id="buttons">
+              <div class="time-button">
+                <span id="dateval"></span><span id="disdate">hello</span>
+                <div class="button-container">
+                  <button type="button" class="button m-1" value="1:00 am - 1:30 am">1:00 am - 1:30 am</button>
+                  <button type="button" class="button m-1" value="2:00 am - 2:30 am">2:00 am - 2:30 am</button>
+                  <button type="button" class="button m-1" value="3:00 am - 3:30 am">3:00 am -3:30 am</button>
+                  <button type="button" class="button m-1" value="4:00 am - 4:30 am">4:00 am - 4:30 am</button>
+                  <button type="button" class="button m-1" value="5:00 am - 5:30 am">5:00 am - 5:30 am</button>
+                  <button type="button" class="button m-1" value="6:00 am - 6:30 am">6:00 am - 6:30 am</button>
+                  <button type="button" class="button m-1" value="7:00 am - 7:30 am">7:00 am - 7:30 am</button>
+                  <button type="button" class="button m-1" value="8:00 am - 8:30 am">8:00 am - 8:30 am</button>
+                  <button type="button" class="button m-1" value="9:00 am - 9:30 am">9:00 am - 9:30 am</button>
+                </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="timed">Time</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">next</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal end -->
+<!-- Modal 2-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img src="logo.svg" alt="" style="margin:0 auto; width: 50%;">
+              <hr>
+              <h3>Fibery Demo</h3>
+              <h4>45 min</h4>
+              <p id="showtime">time</p>
+              <p id="showdate"></p>
+              <p>To schedule a meeting, please provide details such as preferred date and time, duration, and agenda.</p>
+            </div>
+            <div class="col-sm">
+              <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Interests:</label><br>
+                        <input type="checkbox" id="interest1" name="interest1">
+                        <label for="interest1">Interest 1</label><br>
+                        <input type="checkbox" id="interest2" name="interest2">
+                        <label for="interest2">Interest 2</label><br>
+                        <input type="checkbox" id="interest3" name="interest3">
+                        <label for="interest3">Interest 3</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" id="btnb" data-toggle="modal" data-target="#exampleModal2">Submit</button>
+                </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal3 -->
+<!-- Modal 3-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+       
+      </div>
+      <div class="modal-body">
+        
+        <p class="items-center font-lg font-bold text-center">You are scheduled</p>
+        <p class="text-center">A calender invitation has been sent to your email address</p>
+        <section class="text-black body-font">
+          <div class="container mx-auto flex flex-col px-5 py-6 text-left">
+            <div class="border-2 border-black px-4 py-4">
+            <h1 class="text-lg font-bold">Fiberly Demo</h1>
+            <p id="name1">Name</p>
+            <p id="timeanddate"> Time</p>
+            <p>UK Ireland ubston time</p>
+            <p>Web meeting scheldeued</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container mx-auto flex flex-col px-5 py-6">
+        <h1 class="text-lg font-bold">Schedule your meetings with fiberly for free</h1>
+        <p>Eliminate the back and forth emails for eliminating time</p>
+          <div>
+          </div>
+          
+<div class="button-container1">
+  <div class="button1 m-2">
+    <img src="google.png" alt="Google Logo">
+    <span>Sign up with google</span>
+    
+  </div>
+  <div class="button1 m-2">
+    <img src="micro.png" alt="Microsoft Logo">
+    <span>Sign up with Microsoft</span>
+    
+  </div>
+</div>
+      </section>
+</div> 
+</div> 
+</div>
+</div>
+<!-- modal end -->
+
+<script src="cal.js"></script>
+<!-- modal end -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
